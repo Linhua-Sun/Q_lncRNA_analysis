@@ -1,0 +1,9 @@
+#!/bin/bash
+
+LOC="/data1/linhua/QIANLAB/PROJECT/Long-Noncoding-RNA-project/RAW-DATA-2016-09-28"
+
+STAR \
+--runThreadN 20 \
+--genomeDir /data1/linhua/QIANLAB/TAIR10/STAR \
+--readFilesIn ${LOC}/trimmed_BN2-637_R1.fq.gz ${LOC}/trimmed_BN2-637_R2.fq.gz \
+--readFilesCommand gunzip -c
